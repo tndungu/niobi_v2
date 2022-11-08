@@ -5,11 +5,14 @@ import {userActions } from '../_actions'
 import {Formik, Field, Form, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 import '../css/bet.css'
+import { UserRequest } from '../interfaces/interfaces'
 
 export const Register = () => {
-    const alert = useSelector(state => state.alert)
+    //const alert = useSelector(state => state.alert)
 
-    const [user,setUser] = useState({
+    const [user,setUser] = useState<UserRequest>({
+        firstName:'',
+        lastName:'',
         email:'',
         password:'',
         confirmPassword:''
@@ -19,7 +22,7 @@ export const Register = () => {
     },[])
 
     const [submitted, setSubmitted] = useState(false)
-    const registering = useSelector(state => state.registration.registering)
+    //const registering = useSelector(state => state.registration.registering)
     const dispatch = useDispatch()
 
     const validationSchema = Yup.object().shape({
@@ -34,11 +37,11 @@ export const Register = () => {
         .oneOf([Yup.ref('password'),null], 'Passwords must match')
     })
 
-    const handleSubmit = e => {
+    const handleSubmit = (e:any) => {
         
         setSubmitted(true)
         if(e.email && e.password){
-            dispatch(userActions.register(e))
+            //dispatch(userActions.register(e))
         }
     }
 

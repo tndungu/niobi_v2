@@ -27,13 +27,13 @@ const Login = () => {
     },[]);
 
  
-    const handleSubmit = e => {
+    const handleSubmit = (e: any) => {
 
         setSubmitted(true)
         if(e.email && e.password){
             
             const {from } = location.state || {from: {pathname: "/"}}
-            dispatch(userActions.login(e, from))
+            //dispatch(userActions.login(e, from))
         }
     }
 
