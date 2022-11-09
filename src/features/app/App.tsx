@@ -14,7 +14,7 @@ function App() {
   return (
     <div className={styles.app}>
       {/* <Routes /> */}
-      <h1>Testing</h1>
+      <h1>NIOBI App</h1>
     </div>
   );
 }
