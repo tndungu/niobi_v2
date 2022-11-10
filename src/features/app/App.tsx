@@ -1,8 +1,12 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-
-
+import {BrowserRouter as Router} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 import styles from './styles.module.scss';
+import { history } from '../../_helpers';
+import Login from '../auth/login/Login';
+import { Dashboard } from '../dashboard/Dashboard';
+
 
 function App() {
   //let location = useLocation();
@@ -13,8 +17,13 @@ function App() {
 
   return (
     <div className={styles.app}>
-      {/* <Routes /> */}
-      <h1>NIOBI App</h1>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="login" element={<Login />} />
+          {/* <Route path="register" element={<Register />} /> */}
+        </Routes>
+      </Router>
     </div>
   );
 }

@@ -3,8 +3,8 @@ import {useSelector, useDispatch} from 'react-redux'
 import {Link,useLocation } from 'react-router-dom'
 import {userActions } from '../../../_actions'
 import {Formik, Field, Form, ErrorMessage } from 'formik'
-import * as Yup from 'yup'
-import '../css/bet.css'
+import * as Yup from 'yup';
+import '../../auth/Auth.css';
 
 const Login = () => {
     const [inputs,setInputs] = useState({
@@ -53,7 +53,8 @@ const Login = () => {
                               {isSubmitting && <span className="spinner-border spinner-border-sm mr-1"></span>}
                               LOGIN
                           </button>
-                          <Link className="link btn btn-link" to="../register">REGISTER</Link>
+                          <p>Don't have an account yet? <Link className="link btn btn-link" to="../register">Create account</Link></p>
+                        
                       </Form>
                 )}
             </Formik>

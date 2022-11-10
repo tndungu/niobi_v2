@@ -1,0 +1,82 @@
+
+.container{
+
+  width: 100vw;
+  height: 100vh;
+  display:flex;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-container{
+  background: url("/public/assets/3.gif") center;
+}
+
+.login-container{
+  background: url("/public/assets/3.gif") center;
+}
+
+.wrapper{
+  width: 40%;
+  padding: 20px;
+  background-color:white;
+  @media only screen and (max-width: 380px){
+      {width:"75%"}
+  }
+}
+
+.login-container > .wrapper{
+  width: 25%;
+}
+
+
+.btn-link{
+  padding: 5px;
+  margin: 5px 0px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.title{
+  font-size: 24px;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+}
+
+.form-input{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-button{
+  min-width: 40%;
+  border: none;
+  margin: 20px 10px 0px 0px;
+  padding: 10px;
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+}
+
+.form-text{
+  min-width: 40%;
+  margin: 20px 10px 0px 0px;
+  padding: 10px;
+}
+
+.invalid-feedback{
+  color: red;
+  font-weight: 500;
+}
+
+.title-login{
+  font-size: 24px;
+  font-weight: 300;
+  display: flex;
+  justify-content: flex-start;
+}
+
