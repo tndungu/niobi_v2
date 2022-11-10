@@ -1,11 +1,11 @@
-import { Subject } from 'rxjs';
-import { filter } from 'rxjs/operators';
+// import { Subject } from 'rxjs';
+// import { filter } from 'rxjs/operators';
 
-const alertSubject = new Subject();
+//const alertSubject = new Subject();
 const defaultId = 'default-alert';
 
 export const alertService = {
-    onAlert,
+    //onAlert,
     success,
     error,
     info,
@@ -21,10 +21,10 @@ export const AlertType = {
     Warning: 'Warning'
 }
 
-// enable subscribing to alerts observable
-function onAlert(id = defaultId) {
-    return alertSubject.asObservable().pipe(filter(x => x && x.id === id));
-}
+// // enable subscribing to alerts observable
+// function onAlert(id = defaultId) {
+//     return alertSubject.asObservable().pipe(filter(x => x && x.id === id));
+// }
 
 // convenience methods
 function success(message, options) {
@@ -47,10 +47,10 @@ function warn(message, options) {
 function alert(alert) {
     alert.id = alert.id || defaultId;
     alert.autoClose = (alert.autoClose === undefined ? true : alert.autoClose);
-    alertSubject.next(alert);
+   // alertSubject.next(alert);
 }
 
 // clear alerts
 function clear(id = defaultId) {
-    alertSubject.next({ id });
+   // alertSubject.next({ id });
 }

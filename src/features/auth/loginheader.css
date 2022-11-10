@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    background: #F5F5F5;
+}
+
+ .imgBx {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+ .imgBx:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+ .imgBx .background-img img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99vh;
+    object-fit: cover;
+}
+
+.logo-corporate {
+    position: absolute;
+    bottom: 0px;
+    transform: translate(0px, 0px);
+    width: 100%;
+    height: 40vh;
+    background: linear-gradient(225deg, #025041, #fff);
+    mix-blend-mode: screen;
+}
+
+.logo-niobi {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    width: 359px;
+    height: 256px;
+    transform: translate(150px, 150px);
+}
+
+
+.link{
+    display: flex;
+    color: #025041;
+    
+    gap: 15px;
+    transition: all 0.5s;
+  }
+  
+  .link:hover{
+    color: #025041;
+    transition: all 0.5s;
+  }
+  
+  .active{
+    background: rgb(102, 117, 102);
+    color: #000;
+  }
+  
+  .icon, .link_text{
+    font-size: 20px;
+  }
+
+  .formBx {
+    width: 50%;
+}
+
+  .formBx h2 {
+    color: #025041;
+    font-weight: 600;
+    font-size: 1.5em;
+    display: inline-block;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.formBx .inputBx {
+    /* margin-bottom: 20px; */
+    margin: 0px 0px;
+    padding-bottom: 5px;
+}
+
+  .formBx .inputBx span {
+    font-size: 14px;
+    margin-bottom: 2px;
+    display: inline-block;
+    color: #025041;
+    letter-spacing: 1px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+  .formBx .inputBx input {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #c1c9c1;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    background: transparent;
+    color: #025041;
+    
+}
+
+.formBx .inputBx input:hover {
+    border-color: #023d41;
+    box-shadow:rgba(22, 211, 123, 0.2) 0px 0px 0px 4px 2px 2px 2px 2px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    
+}
+
+  /* .formBx .inputBx input[type="submit"] {
+    color: #fff;
+    background: #025041;
+    outline: none;
+    font-weight: 500;
+    width: 80%;
+    cursor: pointer;
+} */
+
+  .formBx .inputBx input[type="submit"]:hover {
+    background: #023d31;
+}
+
+  .formBx .remember {
+    margin-bottom: 10px;
+    color: #023d41;
+    font-weight: 400;
+    font-size: 14px;
+    width: 80%;
+}
+
+  .formBx .remember input[type="checkbox"] {
+    margin-right: 0.2rem;
+}
+
+  .formBx .remember span {
+    display: flex;
+    justify-content: right;
+}
+
+  .formBx .inputBx p {
+    color: #023d41;
+}
+
+@media (max-width: 768px) {
+     .imgBx {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%
+    }
+
+    
+
+      .formBx {
+        width: 80%;
+        padding: 40px;
+        background: rgb(255 255 255 / 0.4);
+        margin: 5px;
+    }
+
+      .formBx h3 {
+        color: #607d8b;
+        text-align: center;
+        margin: 30px 0 10px;
+        font-weight: 500;
+    }
+}
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 1rem 1rem;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #c1c9c1;
+}
+
+.separator:not(:empty)::before {
+    margin-right: .25em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .25em;
+}
+
+
+.social-login {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.formBx{
+    width: 35%;
+}
+  .formBx .social-login-item {
+    display: flex;
+    align-items: center;
+    height: 45px;
+    border: 1px solid #c1c9c1;
+    border-radius: 5px;
+    justify-content: space-evenly;
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+    width: 40%;
+    margin: 0.3rem;
+    cursor: pointer;
+    height: 100%;
+}
+  .formBx .social-login-item:hover {
+    background: #025041;
+}
+
+  .formBx .social-login-item a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    color: #025041;
+    outline: none;
+    background: transparent;
+}
+  .formBx .social-login-item:hover a{
+    color:#fff;
+ }
+
+
+  .formBx .social-login-item input {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #c1c9c1;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    background: transparent;
+    color: #025041;
+}
+
+.centerText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.centerText p {
+    color: #025041;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 40px;
+}
+
+  .formBx .header- .welcome span {
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 0%;
+}
+
+  .formBx .header- .details span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 0%;
+    letter-spacing: 0.04em;
+    color: #868A8F;
+}
+.inputBx .centerText p{
+    min-width: 0px;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    color: #000;
+}
+
+.invalid-Login span{
+    margin: 8px 0px 0px;
+    min-width: 0px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgb(255, 71, 93);
+}

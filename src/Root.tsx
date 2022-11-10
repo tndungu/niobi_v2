@@ -8,11 +8,11 @@ import { store } from './Store/store';
 import { Provider } from 'react-redux';
 
 const Root = () => {
-  // const monite = new MoniteApp({
-  //   apiKey:"https://api.monite.com/v1",
-  //   entityId: 'ID',
-  //   token: ""
-  // });
+  const monite = new MoniteApp({
+    apiUrl:"https://api.monite.com/v1",
+    entityId: 'ID',
+    token: ""
+  });
 
   //store.setMoniteApp(monite);
 

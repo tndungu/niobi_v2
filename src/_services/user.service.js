@@ -8,12 +8,14 @@ export const userService = {
 }
 
 function login(user){
+    console.log("calling login service:  ",user);
+    
     const requestOptions = {
         method:'POST',
         headers:{'Content-Type': 'application/json'},
         body: JSON.stringify(user)
     }
-    return fetch(`${config.apiUrl}/user/authenticate`,requestOptions)
+    return fetch(`${config.apiUrl}`,requestOptions)
         .then(handleResponse)
 }
 
@@ -30,5 +32,5 @@ function register(user){
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify(user)
     }
-    return fetch(`${config.apiUrl}/user/register`,requestOptions).then(handleResponse)
+    return fetch(`${config.apiUrl}`,requestOptions).then(handleResponse)
 }

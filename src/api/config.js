@@ -1,5 +1,5 @@
 const config = {
-    apiUrl: "https://localhost:7066/api/v1"
+    apiUrl: "https://users.niobi.co/api/login"
 }
 
 export {config}

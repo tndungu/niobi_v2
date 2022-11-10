@@ -4,7 +4,7 @@ import {Link } from 'react-router-dom'
 import {userActions } from '../../../_actions'
 import {Formik, Field, Form, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
-import '../css/bet.css'
+import '../Auth.css'
 import { UserRequest } from '../../../interfaces/interfaces'
 
 export const Register = () => {

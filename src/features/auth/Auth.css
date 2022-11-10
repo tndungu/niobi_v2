@@ -1,6 +1,5 @@
 
 .container{
-
   width: 100vw;
   height: 100vh;
   display:flex;
@@ -18,9 +17,12 @@
 }
 
 .wrapper{
-  width: 40%;
+  width: 496px; /* 30%;*/
   padding: 20px;
   background-color:white;
+  padding: 48px 16px;
+  border: 1px solid #DDDDDD;
+  border-radius: 8px;
   @media only screen and (max-width: 380px){
       {width:"75%"}
   }
@@ -39,32 +41,25 @@
 }
 
 .title{
-  font-size: 24px;
-  font-weight: 300;
+  font-size: 32px;
   display: flex;
   justify-content: center;
+  width: 464px;
+  font-weight: 600;
+  line-height: 40px;
+  text-align: center;
+  color: #111111;
 }
 
 .form-input{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
-.form-button{
-  min-width: 40%;
-  border: none;
-  margin: 20px 10px 0px 0px;
-  padding: 10px;
-  background-color: teal;
-  color: white;
-  cursor: pointer;
-}
 
 .form-text{
-  min-width: 40%;
-  margin: 20px 10px 0px 0px;
+  margin: 0px 0px 0px 0px;
   padding: 10px;
 }
 
@@ -80,3 +75,62 @@
   justify-content: flex-start;
 }
 
+.pwd-container {
+  position: relative;
+}
+
+.pwd-container input {
+  padding: 5px 30px 5px 10px;
+  font-size: 20px;
+}
+
+.pwd-container img {
+  cursor: pointer;
+  position: absolute;
+  width: 20px;
+  right: 8px;
+  top: 10px;
+  background: transparent;
+}
+
+.inputBx{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding-bottom: 15px;
+}
+.formBx{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  border-radius: 8px;
+  padding: 10px 18px;
+}
+ .formBx .inputBx button {
+  width: 80%;
+  padding: 10px 20px;
+  outline: none;
+  font-weight: 400;
+  border: 1px solid #c1c9c1;
+  font-size: 16px;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  background: transparent;
+  color: #025041;
+}
+
+ .formBx .inputBx button[type="submit"] {
+  color: #fff;
+  background: #025041;
+  outline: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+ .formBx .inputBx button[type="submit"]:hover {
+  background: #023d31;
+}
+
+.invalid-feedback{
+  color: red;
+}

@@ -6,6 +6,7 @@ import styles from './styles.module.scss';
 import { history } from '../../_helpers';
 import Login from '../auth/login/Login';
 import { Dashboard } from '../dashboard/Dashboard';
+import { Register } from '../auth/register/Register';
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="login" element={<Login />} />
-          {/* <Route path="register" element={<Register />} /> */}
+          <Route path="register" element={<Register />} />
         </Routes>
       </Router>
     </div>
