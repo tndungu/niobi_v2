@@ -1,7 +1,9 @@
 export interface UserRequest {
-    firstName: string,
-    lastName: string,
+    first_name: string,
+    last_name: string,
     email: string,
     password: string,
-    confirmPassword: string
+    confirm_password: string,
+    mobile:string,
+    country_code:string
 }

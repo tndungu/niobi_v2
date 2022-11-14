@@ -41,7 +41,7 @@ const DefaultLayout = ({ children }: DefaultLayoutProps) => {
         <Flex alignItems="center" ml={12}>
           <Avatar size={44}>M</Avatar>
           <Box ml={12}>
-            <Text textSize="smallBold">Silver Wind LLC</Text>
+            <Text textSize="18px">Silver Wind LLC</Text>
           </Box>
         </Flex>
         <Box flex={1}>

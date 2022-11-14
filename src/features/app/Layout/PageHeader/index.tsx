@@ -19,7 +19,7 @@ const PageHeader = ({ title, extra }: PageHeaderProps) => {
   return (
     <Wrapper>
       <div>
-        <Text as="h1" textSize="h2">
+        <Text as="h1">
           {title}
         </Text>
       </div>

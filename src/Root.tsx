@@ -19,13 +19,13 @@ const Root = () => {
   return (
     <React.StrictMode>
         <Provider store={store}>
-          {/* <MoniteProvider
+          <MoniteProvider
             monite={monite}
             // REPLACE {} WITH CUSTOM THEME OBJECT OR SET INDIVIDUAL COLORS
             theme={{}}
-          > */}
+          >
             <App />
-          {/* </MoniteProvider> */}
+          </MoniteProvider>
         </Provider>
     </React.StrictMode>
   );

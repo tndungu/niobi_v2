@@ -15,7 +15,7 @@ function login(user){
         headers:{'Content-Type': 'application/json'},
         body: JSON.stringify(user)
     }
-    return fetch(`${config.apiUrl}`,requestOptions)
+    return fetch(`${config.apiUrl}/login`,requestOptions)
         .then(handleResponse)
 }
 
@@ -32,5 +32,5 @@ function register(user){
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify(user)
     }
-    return fetch(`${config.apiUrl}`,requestOptions).then(handleResponse)
+    return fetch(`${config.apiUrl}/register`,requestOptions).then(handleResponse)
 }

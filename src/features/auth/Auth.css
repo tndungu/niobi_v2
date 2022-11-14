@@ -12,12 +12,16 @@
   background: url("/public/assets/3.gif") center;
 }
 
-.login-container{
+.register-container{
   background: url("/public/assets/3.gif") center;
 }
 
+.login-container{
+  background: url("/public/assets/3.gif") center;
+}
+/* 
 .wrapper{
-  width: 496px; /* 30%;*/
+  width: 496px;
   padding: 20px;
   background-color:white;
   padding: 48px 16px;
@@ -30,7 +34,7 @@
 
 .login-container > .wrapper{
   width: 25%;
-}
+} */
 
 
 .btn-link{
@@ -53,6 +57,7 @@
 
 .form-input{
   display: flex;
+  width: 464px;
   flex-direction: column;
   align-items: center;
 }
@@ -80,8 +85,8 @@
 }
 
 .pwd-container input {
-  padding: 5px 30px 5px 10px;
-  font-size: 20px;
+  /* padding: 5px 30px 5px 10px;
+  font-size: 20px; */
 }
 
 .pwd-container img {
@@ -89,7 +94,7 @@
   position: absolute;
   width: 20px;
   right: 8px;
-  top: 10px;
+  top: 15px;
   background: transparent;
 }
 
@@ -106,6 +111,9 @@
   border-radius: 8px;
   padding: 10px 18px;
 }
+
+
+
  .formBx .inputBx button {
   width: 80%;
   padding: 10px 20px;
@@ -120,11 +128,36 @@
 }
 
  .formBx .inputBx button[type="submit"] {
-  color: #fff;
-  background: #025041;
-  outline: none;
-  font-weight: 500;
-  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 16px;
+  gap: 8px;
+  
+  width: 100%;
+  height: 48px;
+  
+  background:#025041;
+  border-radius: 6px;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+
+.formBx .inputBx button[type="submit"] span{
+  width: 100px;
+height: 24px;
+font-family: 'Faktum';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+color: #FFFFFF;
+flex: none;
+order: 1;
+flex-grow: 0;
 }
 
  .formBx .inputBx button[type="submit"]:hover {
@@ -133,4 +166,24 @@
 
 .invalid-feedback{
   color: red;
+}
+
+
+.mobile-no-input{
+  display: flex;
+  flex-direction: row;
+ 
+}
+
+.inputBx-mobile-prefix{
+  width: 30%;
+}
+
+.inputBx-mobile{
+ width: 70%;
+ display: grid;
+ padding-left: 0.2rem;
+}
+
+.input-mobile .inputBx{
 }

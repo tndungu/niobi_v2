@@ -81,7 +81,7 @@ const MenuItem = ({ item }: MenuItemProps) => {
                   {renderIcon({ width: 20, color: iconColor })}
                 </LinkIcon>
               )}{' '}
-              <LinkText textSize="smallBold" ml="8px">
+              <LinkText ml="8px">
                 {label}
               </LinkText>
               {children && (
@@ -102,7 +102,7 @@ const MenuItem = ({ item }: MenuItemProps) => {
                 {subItem.renderIcon({ width: 20, color: iconColor })}
               </LinkIcon>
             )}
-            <LinkText textSize="smallBold" ml="8px">
+            <LinkText ml="8px">
               {subItem.label}
             </LinkText>
           </MenuSubItemLink>
