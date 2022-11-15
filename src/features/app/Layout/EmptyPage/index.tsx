@@ -14,17 +14,15 @@ type EmptyPageProps = {
 const EmptyPage = ({ label, renderIcon, apiLink = '' }: EmptyPageProps) => {
   return (
     <Layout>
-      <div className={styles.emptyPageWrapper}>
-        <div className={styles.emptyPageContent}>
-          <Box mb={3}>
-            {renderIcon &&
-              renderIcon({ width: 54, color: THEMES.default.colors.primary })}
-          </Box>
-         <div>
-          
-         </div>
+      <div className={styles.navWrapper}>
+        <div className={styles.topNav}>
+          <h1>Top Nav</h1>
+        </div>
+        <div className={styles.emptyPageWrapper}>
+          <h3>body</h3>
         </div>
       </div>
+
     </Layout>
   );
 };

@@ -7,10 +7,8 @@
 }
 
 .content {
-  background: #fff;
-  padding: 36px 48px;
-  height: 100vh;
-  min-height: min-content;
+  background: none;
+  // padding: 5px 8px;
   display: flex;
   flex-direction: column;
 }
@@ -56,4 +54,19 @@
   font-size: 16px;
   font-weight: 500;
   text-decoration: underline;
+}
+
+.topNav{
+  background: none;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 5%;
+  padding: 5px 8px;
+}
+
+.navWrapper{
+  height: 100%;
+  overflow: auto;
+  background: #ccc;
 }
