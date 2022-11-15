@@ -7,6 +7,7 @@ import { history } from '../../_helpers';
 import Login from '../auth/login/Login';
 import { Dashboard } from '../dashboard/Dashboard';
 import { Register } from '../auth/register/Register';
+import { ForgotPassword } from '../auth/login/ForgotPassword';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="register" element={<Register />} />
+          <Route path="forgotpassword" element={<ForgotPassword />} />
         </Routes>
       </Router>
     </div>

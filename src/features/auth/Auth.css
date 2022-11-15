@@ -1,7 +1,6 @@
 
 .container{
-  width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display:flex;
   background-size: cover;
   align-items: center;
@@ -147,7 +146,6 @@
 
 
 .formBx .inputBx button[type="submit"] span{
-  width: 100px;
 height: 24px;
 font-family: 'Faktum';
 font-style: normal;

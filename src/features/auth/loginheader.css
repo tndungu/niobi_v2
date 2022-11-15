@@ -109,29 +109,16 @@
   height: 60%;
 }
 
-
-.login{
-  
-width: 464px;
-height: 40px;
-
-/* Titles/H2 */
-
-/* identical to box height, or 125% */
-
-text-align: center;
-
-/* New brand/Black */
-
-color: #111111;
-
-
-/* Inside auto layout */
-
-flex: none;
-order: 0;
-flex-grow: 0;
+.login {
+  width: 464px;
+  height: 40px;
+  text-align: center;
+  color: #111111;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
+
 .login span{
 
   font-family: 'Faktum';
@@ -171,28 +158,17 @@ flex-grow: 0;
 
   .formBx .inputBx input {
     box-sizing: border-box;
-
-    /* Auto layout */
-    
+    margin-bottom: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0px 16px;
     gap: 8px;
-    
     width: 100%;
     height: 48px;
-    
-    /* Greys/White */
-    
     background: #FFFFFF;
-    /* Greys/Light Grey 2 */
-    
     border: 1px solid #DDDDDD;
     border-radius: 8px;
-    
-    /* Inside auto layout */
-    
     flex: none;
     order: 0;
     flex-grow: 1;
@@ -202,37 +178,27 @@ flex-grow: 0;
     border-color: #023d41;
     box-shadow:rgba(22, 211, 123, 0.2) 0px 0px 0px 4px 2px 2px 2px 2px;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
-    
 }
-
-
 
   .form-button {
-    /* Auto layout */
-
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 0px 16px;
-gap: 8px;
-
-width: 368px;
-height: 48px;
-
-background: #023d31;
-border-radius: 6px;
-
-/* Inside auto layout */
-
-flex: none;
-order: 0;
-flex-grow: 1;
-}
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 16px;
+    gap: 8px;
+    width: 368px;
+    height: 48px;
+    background: #023d31;
+    border-radius: 6px;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+  }
 
   .formBx .inputBx input[type="submit"]:hover {
     background: #023d31;
-}
+  }
 
   .formBx .remember {
     margin-bottom: 10px;
@@ -242,64 +208,38 @@ flex-grow: 1;
     width: 80%;
 }
 
-  .formBx .remember input[type="checkbox"] {
-    margin-right: 0.2rem;
-}
+    .formBx .remember input[type="checkbox"] {
+      margin-right: 0.2rem;
+    }
 
   .formBx .remember .link {
-    
-width: 368px;
-height: 20px;
-
-/* Small/Link */
-
-font-family: 'Faktum';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 20px;
-/* identical to box height, or 143% */
-
-text-decoration-line: underline;
-
-/* New brand/Grey 2 */
-
-color: #707070;
-
-
-/* Inside auto layout */
-
-flex: none;
-order: 0;
-flex-grow: 0;
-}
-
-  .formBx .inputBx p {
-    width: 278px;
-height: 20px;
-
-/* Small/Small */
-
-font-family: 'Faktum';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 20px;
-/* identical to box height, or 143% */
-
-text-align: center;
-
-/* Greys/Black */
-
-color: #111111;
-
-
-/* Inside auto layout */
-
-flex: none;
-order: 0;
-flex-grow: 0;
-}
+    width: 368px;
+    height: 20px;
+    font-family: 'Faktum';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration-line: underline;
+    color: #707070;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+    .formBx .inputBx p {
+      width: 278px;
+      height: 20px;
+      font-family: 'Faktum';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      color: #111111;
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+    }
 
 @media (max-width: 768px) {
      .imgBx {
@@ -368,6 +308,7 @@ flex-grow: 0;
 }
 
 .formBx{
+  margin-top: 0.5rem;
 }
   .formBx .social-login-item {
     display: flex;
@@ -390,7 +331,11 @@ flex-grow: 0;
 }
 
 .social-box{
-  height:40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 80%;
+  /* height:40px; */
 }
 
   .formBx .social-login-item a {

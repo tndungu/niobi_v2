@@ -49,7 +49,6 @@ const Login: React.FunctionComponent<ILogin>  = () => {
 
  
     const handleSubmit = (e: any) => {
-
         console.log(e);
         setSubmitted(true)
         if(e.email && e.password){
@@ -95,7 +94,7 @@ const Login: React.FunctionComponent<ILogin>  = () => {
                             <div className='inputBx'>
                                 <button type="submit" disabled={isSubmitting} className="form-button">
                                     {isSubmitting && <span className="spinner-border spinner-border-sm mr-1"></span>}
-                                    <span>Sign In</span>
+                                    <span>Login</span>
                                 </button>
                             </div>
                             <div className="inputBx">

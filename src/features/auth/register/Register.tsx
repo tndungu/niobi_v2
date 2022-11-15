@@ -8,6 +8,7 @@ import '../Auth.css'
 import { UserRequest } from '../../../interfaces/interfaces';
 import showPwdImg from '../ShowPassword/show-password.svg';
 import hidePwdImg from '../ShowPassword/hide-password.svg';
+import { LoginHeader } from '../LoginHeader'
 
 export const Register = () => {
     //const alert = useSelector(state => state.alert)
@@ -46,7 +47,7 @@ export const Register = () => {
         console.log("event: ",e);
         setSubmitted(true)
         if(e.email && e.password){
-            dispatch(userActions.register(e) as any)
+            dispatch(userActions.register({e}) as any)
         }
     }
 
@@ -124,15 +125,16 @@ export const Register = () => {
                             <div className='inputBx'>
                                 <button type="submit" disabled={isSubmitting} className="form-button">
                                     {isSubmitting && <span className="spinner-border spinner-border-sm mr-1"></span>}
-                                    <span>Sign In</span>
+                                    <span>Sign Up</span>
                                 </button>
                             </div>
                             <div className="inputBx">
-                                <p>Already have an account? <Link to="../login">Sign in now</Link></p>
+                                <p>Already have an account? <Link to="../login">Login</Link></p>
                             </div>
                         </Form>
                     )}
                 </Formik>
+                <LoginHeader component="register" />
             </div>
     </div>
   )

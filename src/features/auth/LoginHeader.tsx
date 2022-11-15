@@ -8,6 +8,7 @@ export interface LoginHeaderProps {
 export const LoginHeader = ({component}: LoginHeaderProps) => {
     const welcome = component == 'login' ? "Welcome Back !" : "Get Started with Niobi";
     const msg = component == 'login' ? "Please enter your details" : "We would love ot learn more about your business.";
+    const buttonLabel = component == 'login' ? "Login" : "Register";
   return (
     <div className='social-box'>
       <div className="separator">Or</div>
@@ -17,7 +18,7 @@ export const LoginHeader = ({component}: LoginHeaderProps) => {
       <div className="social-login">
           <img src="/assets/google.png" width="20px" />
           <a href="#" type="button">
-            Login with Google
+            {buttonLabel} with Google 
           </a>
         </div>
     </div>
