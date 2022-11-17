@@ -44,6 +44,7 @@ const MenuSubItemLink = styled(MenuItemLink)`
 
 const LinkText = styled(Text)`
   flex: 1 1 auto;
+  color:#fff;
 `;
 
 const LinkIcon = styled.i`

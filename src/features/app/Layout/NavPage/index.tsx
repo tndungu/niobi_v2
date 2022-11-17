@@ -4,6 +4,9 @@ import { THEMES, Link, Text, Box, Card } from '@team-monite/ui-kit-react';
 
 import styles from '../styles.module.scss';
 import Layout from '..';
+import { Entity } from '../entity/Entity';
+import { Compliance } from '../compliance/Compliance';
+import { Outlet } from 'react-router-dom';
 
 type EmptyPageProps = {
   label?: string;
@@ -11,20 +14,18 @@ type EmptyPageProps = {
   apiLink?: string;
 };
 
-const EmptyPage = ({ label, renderIcon, apiLink = '' }: EmptyPageProps) => {
+const NavPage = ({ label, renderIcon, apiLink = '' }: EmptyPageProps) => {
   return (
     <Layout>
-      <div className={styles.navWrapper}>
+      <div className={styles.emptyPageWrapper}>
         <div className={styles.topNav}>
-          <h1>Top Nav</h1>
         </div>
-        <div className={styles.emptyPageWrapper}>
-          <h3>body</h3>
-        </div>
+        {/* <Entity /> */}
+        {/* <Compliance /> */}
+        <Outlet />
       </div>
-
     </Layout>
   );
 };
 
-export default EmptyPage;
+export default NavPage;

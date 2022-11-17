@@ -8,7 +8,8 @@
 
 .content {
   background: none;
-  // padding: 5px 8px;
+   padding: 0px 0px;
+
   display: flex;
   flex-direction: column;
 }
@@ -35,11 +36,13 @@
 }
 
 .emptyPageWrapper {
-  height: 100%;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 100vh;
   justify-content: center;
   align-items: center;
+  background: none;
 }
 
 .emptyPageContent {
@@ -47,6 +50,7 @@
   flex-direction: column;
   justify-content: center;
   width: 480px;
+  height: 100%;
   align-items: center;
 }
 
@@ -58,15 +62,42 @@
 
 .topNav{
   background: none;
+  z-index: -1;
   top: 0;
   display: flex;
+  position: fixed;
+  top: 0;
+  height: 8%;
   width: 100%;
-  height: 5%;
   padding: 5px 8px;
+  background: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.navWrapper{
-  height: 100%;
+.bodyWrapper{
+  // min-height: 92%;
   overflow: auto;
-  background: #ccc;
+  display: flex;
+  width: 100%;
+  background: none;
+  justify-content: center;
+  padding: 24px 0px;
+}
+
+.registrationBody{
+  box-sizing: border-box;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 16px;
+  gap: 24px;
+  width: 60%;
+  background: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  border-radius: 8px;
+  flex: none;
+  height: 50%;
+  order: 1;
+  flex-grow: 0;
 }

@@ -39,9 +39,9 @@ const DefaultLayout = ({ children }: DefaultLayoutProps) => {
     <Flex className={styles.layout}>
       <Sider className={styles.sider} width={240}>
         <Flex alignItems="center" ml={12}>
-          <Avatar size={44}>M</Avatar>
+          <Avatar size={44}>B</Avatar>
           <Box ml={12}>
-            <Text textSize="18px">Silver Wind LLC</Text>
+            <Text textSize="18px">Invision Business Systems</Text>
           </Box>
         </Flex>
         <Box flex={1}>

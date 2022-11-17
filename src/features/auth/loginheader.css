@@ -118,6 +118,15 @@
   order: 0;
   flex-grow: 0;
 }
+.register-business {
+  width: 464px;
+  height: 40px;
+  text-align: center;
+  color: #111111;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
 
 .login span{
 
@@ -174,6 +183,49 @@
     flex-grow: 1;
 }
 
+.formBx .inputBx input[type="button"] {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 16px;
+  gap: 8px;
+  margin-top: 10px;
+  
+  width: 60%;
+  height: 48px;
+  color:#fff;
+  background:#025041;
+  border-radius: 6px;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+.verification-button{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.formBx .inputBx-mobile input {
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  height: 48px;
+  background: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  padding: 0px 50px;
+}
+
 .formBx .inputBx input:hover {
     border-color: #023d41;
     box-shadow:rgba(22, 211, 123, 0.2) 0px 0px 0px 4px 2px 2px 2px 2px;
@@ -198,6 +250,9 @@
 
   .formBx .inputBx input[type="submit"]:hover {
     background: #023d31;
+  }
+  .formBx .inputBx input[type="tel"]{
+    padding: 0px 45px;
   }
 
   .formBx .remember {

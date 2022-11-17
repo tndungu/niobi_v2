@@ -9,6 +9,8 @@ import { UserRequest } from '../../../interfaces/interfaces';
 import showPwdImg from '../ShowPassword/show-password.svg';
 import hidePwdImg from '../ShowPassword/hide-password.svg';
 import { LoginHeader } from '../LoginHeader'
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 
 export const Register = () => {
     //const alert = useSelector(state => state.alert)
@@ -32,23 +34,44 @@ export const Register = () => {
     const dispatch = useDispatch()
 
     const validationSchema = Yup.object().shape({
-        email: Yup.string()
-            .required('Email is required')
-            .email('Email is invalid'),
+        
+        first_name: Yup.string()
+            .required('First Name is required'),
+        last_name: Yup.string()
+            .required('Last Name is required'),
         password: Yup.string()
             .min(6,'Password must be atleast 6 characters')
             .required('Password is required'),
-            
+        email: Yup.string()
+            .required('Email is required')
+            .email('Email is invalid'),   
         confirm_password: Yup.string()
-        .oneOf([Yup.ref('password'),null], 'Passwords must match')
+        .oneOf([Yup.ref('password'),null], 'Passwords must match'),
     })
 
     const handleSubmit = (e:any) => {
-        console.log("event: ",e);
+        var req = {
+            first_name: e.first_name,
+            last_name: e.last_name,
+            email: e.email,
+            password: e.password,
+            confirm_password: e.confirm_password,
+            country_code: `+${user.country_code}`,
+            mobile: user.mobile
+        }
+
+        console.log("CreateUser Request is: ",req);
+    
         setSubmitted(true)
         if(e.email && e.password){
-            dispatch(userActions.register({e}) as any)
+            dispatch(userActions.register({req}) as any)
         }
+    }
+    const handleOnChange = (value:any, country:any,e:any,formattedValue:any) =>{
+        
+        setUser((prev) => ({ ...prev, country_code:country?.dialCode,
+            mobile:formattedValue.substring(country?.dialCode?.length+1)
+        }));
     }
 
   return (
@@ -75,7 +98,22 @@ export const Register = () => {
                                 <Field  name="email" type="text" placeholder="Email" className={'form-text form-control' + (errors.email && touched.email ? ' is-invalid' : '')} />
                                 <ErrorMessage name="email" component="div" className="invalid-feedback red" />
                             </div>
-                          <div className='inputBx'>
+                            <div className="inputBx">
+                            <span>Mobile</span>
+                            <PhoneInput
+                                country={'ke'}
+                                prefix='+'
+                                value={values.mobile}
+                                onChange={(value,country,e,formattedValue)=>{
+                                    handleOnChange(value,country,e,formattedValue);
+                                    handleChange('mobile');
+                                } }
+                                inputClass={"inputBx-mobile"}
+                                autoFormat={false}
+                                />
+                            </div>
+                            
+                          {/* <div className='inputBx'>
                               <div className='mobile-no-input'>
                                   <div className='inputBx-mobile-prefix'>
                                       <span>Mobile</span>
@@ -84,7 +122,6 @@ export const Register = () => {
                                         <option value="+255">+255</option>
                                         <option value="+256">+256</option>
                                         </Field>
-                                      {/* <Field name="mobile" type="text" placeholder="Mobile" className={'form-text form-control' + (errors.mobile && touched.mobile ? ' is-invalid' : '')} /> */}
                                       <ErrorMessage name="country_code" component="div" className="invalid-feedback red" />
                                   </div>
                                   <div className='inputBx-mobile'>
@@ -93,7 +130,7 @@ export const Register = () => {
                                       <ErrorMessage name="mobile" component="div" className="invalid-feedback red" />
                                   </div>
                               </div>
-                          </div>
+                          </div> */}
                             <div className='inputBx'>
                                 <span>Password</span>
                                 <div className='pwd-container'>

@@ -8,7 +8,12 @@ import Login from '../auth/login/Login';
 import { Dashboard } from '../dashboard/Dashboard';
 import { Register } from '../auth/register/Register';
 import { ForgotPassword } from '../auth/login/ForgotPassword';
-
+import NavPage from './Layout/NavPage';
+import { Entity } from './Layout/entity/Entity';
+import { Compliance } from './Layout/compliance/Compliance';
+import { VerifyEmail } from '../auth/verify-email/VerifyEmail';
+import { Payables } from './Layout/Payables/Payables';
+import { Receivables } from './Layout/Receivables/Receivables';
 
 function App() {
   //let location = useLocation();
@@ -21,8 +26,14 @@ function App() {
     <div className={styles.app}>
       <Router>
         <Routes>
-          <Route path="/" element={<Login />} />
           <Route path="login" element={<Login />} />
+          <Route path="/" element={<NavPage />}>
+            <Route path="entity" element={<Entity />} />
+            <Route path="compliance" element={<Compliance />} />
+            <Route path="verify-email" element={<VerifyEmail />} />
+            <Route path="payables" element={<Payables />} />
+            <Route path="receivables" element={<Receivables />} />
+          </Route>
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="register" element={<Register />} />
           <Route path="forgotpassword" element={<ForgotPassword />} />

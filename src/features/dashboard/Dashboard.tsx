@@ -1,11 +1,11 @@
-import { Button, Sidebar } from '@team-monite/ui-kit-react'
+import { Button } from '@team-monite/ui-kit-react'
 import React from 'react'
-import EmptyPage from '../app/Layout/EmptyPage'
+import NavPage from '../app/Layout/NavPage'
 
 export const Dashboard = () => {
   return (
     <>
-    <EmptyPage/>
+    <NavPage />
     </>
   )
 }
