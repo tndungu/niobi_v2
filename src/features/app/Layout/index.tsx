@@ -40,7 +40,7 @@ const DefaultLayout = ({ children }: DefaultLayoutProps) => {
       <Sider className={styles.sider} width={240}>
         <Flex alignItems="center" ml={12}>
           <Avatar size={44}>B</Avatar>
-          <Box ml={12}>
+          <Box ml={12}  className="companyTitle">
             <Text textSize="18px">Invision Business Systems</Text>
           </Box>
         </Flex>

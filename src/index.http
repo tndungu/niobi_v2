@@ -1,0 +1,16 @@
+POST https://users.niobi.co/api/login
+Content-Type: application/json
+
+{
+	"email" : "muigzn@gmail.com",
+	"password" : "mbennz202"
+}
+
+# {
+# 	"success": true,
+# 	"data": {
+# 		"token": "3|SAUzDsfG1Z81RTEZfmt22w47KK3wVeta0Kp3qVp8",
+# 		"name": "Pablo Muigai"
+# 	},
+# 	"message": "User signed in"
+# }

@@ -14,6 +14,9 @@ import { Compliance } from './Layout/compliance/Compliance';
 import { VerifyEmail } from '../auth/verify-email/VerifyEmail';
 import { Payables } from './Layout/Payables/Payables';
 import { Receivables } from './Layout/Receivables/Receivables';
+import { Settings } from './Layout/Settings/Settings';
+import { ApprovalPolicies } from './Layout/Settings/ApprovalPolicies';
+import { Counterparts } from './Layout/Counterparts/Counterparts';
 
 function App() {
   //let location = useLocation();
@@ -33,6 +36,10 @@ function App() {
             <Route path="verify-email" element={<VerifyEmail />} />
             <Route path="payables" element={<Payables />} />
             <Route path="receivables" element={<Receivables />} />
+            <Route path="counterparts" element={<Counterparts />} />
+            <Route path="settings" element={<Settings />}>
+              <Route path="approval-policies" element={<ApprovalPolicies />} />
+            </Route>
           </Route>
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="register" element={<Register />} />

@@ -20,8 +20,6 @@ const NavPage = ({ label, renderIcon, apiLink = '' }: EmptyPageProps) => {
       <div className={styles.emptyPageWrapper}>
         <div className={styles.topNav}>
         </div>
-        {/* <Entity /> */}
-        {/* <Compliance /> */}
         <Outlet />
       </div>
     </Layout>
