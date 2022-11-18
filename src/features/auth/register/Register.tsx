@@ -9,8 +9,8 @@ import { UserRequest } from '../../../interfaces/interfaces';
 import showPwdImg from '../ShowPassword/show-password.svg';
 import hidePwdImg from '../ShowPassword/hide-password.svg';
 import { LoginHeader } from '../LoginHeader'
-import PhoneInput from 'react-phone-input-2'
-import 'react-phone-input-2/lib/style.css'
+// import PhoneInput from 'react-phone-input-2'
+// import 'react-phone-input-2/lib/style.css'
 
 export const Register = () => {
     //const alert = useSelector(state => state.alert)
@@ -98,7 +98,7 @@ export const Register = () => {
                                 <Field  name="email" type="text" placeholder="Email" className={'form-text form-control' + (errors.email && touched.email ? ' is-invalid' : '')} />
                                 <ErrorMessage name="email" component="div" className="invalid-feedback red" />
                             </div>
-                            <div className="inputBx">
+                            {/* <div className="inputBx">
                             <span>Mobile</span>
                             <PhoneInput
                                 country={'ke'}
@@ -111,9 +111,9 @@ export const Register = () => {
                                 inputClass={"inputBx-mobile"}
                                 autoFormat={false}
                                 />
-                            </div>
+                            </div> */}
                             
-                          {/* <div className='inputBx'>
+                           <div className='inputBx'>
                               <div className='mobile-no-input'>
                                   <div className='inputBx-mobile-prefix'>
                                       <span>Mobile</span>
@@ -130,7 +130,7 @@ export const Register = () => {
                                       <ErrorMessage name="mobile" component="div" className="invalid-feedback red" />
                                   </div>
                               </div>
-                          </div> */}
+                          </div> 
                             <div className='inputBx'>
                                 <span>Password</span>
                                 <div className='pwd-container'>
