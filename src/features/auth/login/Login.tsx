@@ -9,8 +9,6 @@ import showPwdImg from '../ShowPassword/show-password.svg';
 import hidePwdImg from '../ShowPassword/hide-password.svg';
 import { LoginHeader } from '../LoginHeader'
 import {  dispatchStore } from '../../../Store/store';
-import { Button, FormField, } from '@team-monite/ui-kit-react'
-
 
 export interface ILogin {};
 
@@ -39,16 +37,16 @@ const Login: React.FunctionComponent<ILogin>  = () => {
         email: Yup.string()
             .email('Email is invalid')
             .required('Email is required'),
-        password: Yup.string().required('Password is required'),
-        tandc : Yup.boolean().oneOf([true],'Please accept the Terms and Conditions')
+        password: Yup.string().required('Password is required')
     })
 
     useEffect(() => {
-        localStorage.removeItem('user')
+        // localStorage.removeItem('user')
     },[]);
 
  
     const handleSubmit = (e: any) => {
+        
         console.log(e);
         setSubmitted(true)
         if(e.email && e.password){
