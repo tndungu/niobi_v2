@@ -73,9 +73,9 @@ function register(user: any){
                     dispatch(failure(user.message));
                     dispatch(alertActions.error(user.message));
                 }
-                // setTimeout(() => {
-                //     window.location.reload()
-                // }, 4000);
+                setTimeout(() => {
+                    window.location.reload()
+                }, 4000);
             },
             error => {
                 dispatch(failure(error.toString()))
