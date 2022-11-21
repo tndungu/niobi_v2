@@ -1,24 +1,28 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export const VerifyEmail = () => {
+export const VerifyEmail = ({email}:any) => {
   return (
+    <>
       <div className="formBx">
           <div className='register-business'>
-              <span><h2>Verify Email</h2></span>
+              <span><h2>Check your email</h2></span>
           </div>
           <div className='verify-text'>
-              <span><p>Thank you for signing up. A Verification email has been sent to your email.</p></span>
+              <span><p>We sent you a message with password reset link to {email}. Please check it and don't forget to view the spam folder as well.</p></span>
           </div>
           <div className='inputBx'>
               <div className='verification-button'>
-                  <input type='button' value='RESEND VERIFICATION EMAIL' />
-                  <div>
-                      <p><Link to="../login">Sign in</Link></p>
-                  </div>
+                  <input type='button' value='Resend in 30 Sec' />
+                
               </div>
 
           </div>
+          <div className="inputBx">
+                <p>Something wrong? <Link to="../contact-us">Contact us</Link></p>
+            </div>
       </div>
+      
+      </>
   )
 }
