@@ -40,6 +40,7 @@ function App() {
             <Route path="settings" element={<Settings />}>
               <Route path="approval-policies" element={<ApprovalPolicies />} />
             </Route>
+            <Route path="payables" element={<Payables/>} />
           </Route>
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="register" element={<Register />} />

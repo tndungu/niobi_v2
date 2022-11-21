@@ -40,30 +40,36 @@ export const navigationData: Record<string, MenuItemType> = {
     url: '/payables',
     renderIcon: (props) => <UUsdCircle {...props} />,
   },
-  receivables: {
-    label: 'Receivables',
-    url: '/receivables',
-    renderIcon: (props) => <UInvoice {...props} />,
-    apiLink: 'https://docs.monite.com/docs/receivables-lifecycle',
-  },
+  // receivables: {
+  //   label: 'Receivables',
+  //   url: '/receivables',
+  //   renderIcon: (props) => <UInvoice {...props} />,
+  //   apiLink: 'https://docs.monite.com/docs/receivables-lifecycle',
+  // },
   counterparts: {
     label: 'Counterparts',
     url: '/counterparts',
     renderIcon: (props) => <UUniversity {...props} />,
     apiLink: 'https://docs.monite.com/docs/manage-counterparts',
   },
-  products: {
-    label: 'Products & Services',
-    url: '/products',
+    products: {
+    label: 'Wallet',
+    url: '/wallet',
     renderIcon: (props) => <UBox {...props} />,
     apiLink: 'https://docs.monite.com/docs/get-started',
   },
-  audit: {
-    label: 'Audit',
-    url: '/audit',
-    renderIcon: (props) => <UClipboardNotes {...props} />,
-    apiLink: 'https://docs.monite.com/docs/get-started',
-  },
+  // products: {
+  //   label: 'Products & Services',
+  //   url: '/products',
+  //   renderIcon: (props) => <UBox {...props} />,
+  //   apiLink: 'https://docs.monite.com/docs/get-started',
+  // },
+  // audit: {
+  //   label: 'Audit',
+  //   url: '/audit',
+  //   renderIcon: (props) => <UClipboardNotes {...props} />,
+  //   apiLink: 'https://docs.monite.com/docs/get-started',
+  // },
   settings: {
     label: 'Settings',
     url: '/settings',

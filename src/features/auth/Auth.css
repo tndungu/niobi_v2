@@ -51,7 +51,7 @@
   font-weight: 600;
   line-height: 40px;
   text-align: center;
-  color: #111111;
+  color: #025041;
 }
 
 .form-input{
@@ -210,7 +210,7 @@
     font-size: 14px;
     line-height: 20px;
     text-align: center;
-    color: #111111;
+    color: #025041;
     flex: none;
     order: 0;
     flex-grow: 0;

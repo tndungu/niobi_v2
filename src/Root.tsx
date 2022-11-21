@@ -10,8 +10,8 @@ import { Provider } from 'react-redux';
 const Root = () => {
   const monite = new MoniteApp({
     apiUrl:"https://api.monite.com/v1",
-    entityId: 'ID',
-    token: ""
+    entityId: '2973b4e2-4d26-4b63-b60e-39400a4f21ce',
+    token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXlsb2FkIjp7ImNsaWVudF9pZCI6ImQ4NjJlYjg3LTc1ZDEtNDEyOS05MWI1LTVjNzk2ZmJjNjVhZiIsImNyZWF0ZWRfYXQiOiIyMDIyLTExLTIxVDA3OjU3OjM1LjE0MDk0NiJ9LCJleHAiOjE2NjkwMTkyNTV9.olw2i7B4_GYfaGYLRmalkQAL5-FNnFg7SphCtKGZe14"
   });
 
   //store.setMoniteApp(monite);
@@ -21,8 +21,10 @@ const Root = () => {
         <Provider store={store}>
           <MoniteProvider
             monite={monite}
-            // REPLACE {} WITH CUSTOM THEME OBJECT OR SET INDIVIDUAL COLORS
-            theme={{}}
+            theme={{ select:{
+              filterBackgroundColor: '#025041',
+              filterBackgroundColorHover:'025041'
+            } }}
           >
             <App />
           </MoniteProvider>
