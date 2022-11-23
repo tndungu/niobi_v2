@@ -6,7 +6,6 @@ import PageHeader from '../PageHeader';
 import { Button, Dropdown, DropdownMenuItem } from '@team-monite/ui-kit-react';
 import styled from '@emotion/styled';
 
-
 export const Counterparts = () => {
   
   const CreateNewButton = styled(Button)`
