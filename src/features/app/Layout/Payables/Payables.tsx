@@ -4,7 +4,6 @@ import { MoniteApp } from '@team-monite/sdk-api';
 import { useSearchParams } from 'react-router-dom';
 import PageHeader from '../PageHeader';
 
-
 export const Payables = () => {
   
   const monite = new MoniteApp({

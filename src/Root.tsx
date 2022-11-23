@@ -22,8 +22,7 @@ const Root = () => {
           <MoniteProvider
             monite={monite}
             theme={{ select:{
-              filterBackgroundColor: '#025041',
-              filterBackgroundColorHover:'025041'
+              filterBackgroundColorHover:'#025041'
             } }}
           >
             <App />

@@ -17,11 +17,9 @@ type EmptyPageProps = {
 const NavPage = ({ label, renderIcon, apiLink = '' }: EmptyPageProps) => {
   return (
     <Layout>
-      <div className={styles.emptyPageWrapper}>
-        <div className={styles.topNav}>
-        </div>
+        {/* <div className={styles.topNav}>
+        </div> */}
         <Outlet />
-      </div>
     </Layout>
   );
 };

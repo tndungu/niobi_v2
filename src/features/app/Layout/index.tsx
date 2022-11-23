@@ -21,10 +21,10 @@ const Sider = styled(Flex)`
 
   flex-direction: column;
   
-  background: #025041;
+  background: rgb(243, 243, 243);
 
   a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
   }
 `;
@@ -60,7 +60,7 @@ const DefaultLayout = ({ children }: DefaultLayoutProps) => {
               label: 'Logout',
               renderIcon: () => (
                 <UQuestionCircle
-                  color={THEMES.default.colors.primary}
+                  color="#025041"
                   width={20}
                   height={20}
                 />

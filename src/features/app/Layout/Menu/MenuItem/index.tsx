@@ -44,7 +44,7 @@ const MenuSubItemLink = styled(MenuItemLink)`
 
 const LinkText = styled(Text)`
   flex: 1 1 auto;
-  color:#fff;
+  color:#000;
 `;
 
 const LinkIcon = styled.i`
@@ -55,7 +55,7 @@ const MenuItem = ({ item }: MenuItemProps) => {
   const { url, label, renderIcon, children, onClick } = item;
   const [submenuIsShown, setSubmenuIsShown] = useState<boolean>(false);
 
-  const iconColor = THEMES.default.colors.primary;
+  const iconColor = "#025041";
 
   const handleOnClick = (e: React.BaseSyntheticEvent) => {
     if (onClick) {

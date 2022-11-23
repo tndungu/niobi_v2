@@ -11,6 +11,12 @@ const Wrapper = styled.div`
   margin-bottom: 28px;
 `;
 
+const TextWrapper = styled(Text)`
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+`;
+
 type PageHeaderProps = {
   title: string;
   extra?: React.ReactNode;
@@ -19,9 +25,9 @@ const PageHeader = ({ title, extra }: PageHeaderProps) => {
   return (
     <Wrapper>
       <div>
-        <Text as="h1">
+        <TextWrapper as="h1">
           {title}
-        </Text>
+        </TextWrapper>
       </div>
       {extra ? <aside>{extra}</aside> : null}
     </Wrapper>

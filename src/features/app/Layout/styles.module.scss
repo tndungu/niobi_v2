@@ -8,8 +8,8 @@
 
 .content {
   background: none;
-   padding: 0px 0px;
-
+  //  padding: 0px 0px;
+   padding: 36px 48px;
   display: flex;
   flex-direction: column;
 }
@@ -60,19 +60,19 @@
   text-decoration: underline;
 }
 
-.topNav{
-  background: none;
-  z-index: -1;
-  top: 0;
-  display: flex;
-  position: fixed;
-  top: 0;
-  height: 8%;
-  width: 100%;
-  padding: 5px 8px;
-  background: #fff;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
+// .topNav{
+//   background: none;
+//   z-index: -1;
+//   top: 0;
+//   display: flex;
+//   position: fixed;
+//   top: 0;
+//   height: 8%;
+//   width: 100%;
+//   padding: 5px 8px;
+//   background: #fff;
+//   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+// }
 
 .bodyWrapper{
   // min-height: 92%;

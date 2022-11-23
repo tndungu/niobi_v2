@@ -17,13 +17,14 @@ import { Receivables } from './Layout/Receivables/Receivables';
 import { Settings } from './Layout/Settings/Settings';
 import { ApprovalPolicies } from './Layout/Settings/ApprovalPolicies';
 import { Counterparts } from './Layout/Counterparts/Counterparts';
+import { Wallet } from './Layout/Wallet/Wallet';
 
 function App() {
   //let location = useLocation();
 
-  React.useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // React.useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   return (
     <div className={styles.app}>
@@ -36,6 +37,7 @@ function App() {
             <Route path="verify-email" element={<VerifyEmail />} />
             <Route path="payables" element={<Payables />} />
             <Route path="receivables" element={<Receivables />} />
+            <Route path="wallet" element={<Wallet />} />
             <Route path="counterparts" element={<Counterparts />} />
             <Route path="settings" element={<Settings />}>
               <Route path="approval-policies" element={<ApprovalPolicies />} />
