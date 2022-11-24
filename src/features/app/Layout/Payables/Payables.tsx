@@ -3,6 +3,9 @@ import { PayablesTable, PayableDetails } from '@team-monite/ui-widgets-react';
 import { MoniteApp } from '@team-monite/sdk-api';
 import { useSearchParams } from 'react-router-dom';
 import PageHeader from '../PageHeader';
+import { Button, Dropdown, DropdownMenuItem } from '@team-monite/ui-kit-react';
+import styled from '@emotion/styled';
+
 
 export const Payables = () => {
   
@@ -33,7 +36,18 @@ const PAYABLE_ID = 'id';
     });
   return (
     <>
-      <PageHeader title='Payables' />
+      <PageHeader 
+      title='Payables' 
+      extra={
+        <Dropdown button={<Button color='#025041'>Create New</Button>}>
+          <DropdownMenuItem
+            // onClick={() => setType(CounterpartType.ORGANIZATION)} 
+          >
+            Payable
+          </DropdownMenuItem>
+        </Dropdown>
+      }
+      />
       <PayablesTable onRowClick={onRowClick} />
       {id && <PayableDetails id={id} onClose={closeModal} />}
     </>

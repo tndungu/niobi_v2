@@ -21,9 +21,17 @@ const Root = () => {
         <Provider store={store}>
           <MoniteProvider
             monite={monite}
-            theme={{ select:{
+            theme={{ search:{
               filterBackgroundColorHover:'#025041'
-            } }}
+            },
+            select:{
+              filterBackgroundColorHover:'#025041'
+            },
+            datePicker:{
+              filterBackgroundColorHover:'#025041'
+            },
+            
+           }}
           >
             <App />
           </MoniteProvider>

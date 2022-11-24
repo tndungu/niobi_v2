@@ -1,17 +1,30 @@
-import React from 'react'
+import React, { useCallback, useState } from 'react'
 import { CounterpartsTable, CounterpartDetails } from '@team-monite/ui-widgets-react';
 import { MoniteApp } from '@team-monite/sdk-api';
 import { useSearchParams } from 'react-router-dom';
 import PageHeader from '../PageHeader';
 import { Button, Dropdown, DropdownMenuItem } from '@team-monite/ui-kit-react';
+//import { CounterpartType } from '@team-monite/ui-widgets-react';
+
 import styled from '@emotion/styled';
 
 export const Counterparts = () => {
   
-  const CreateNewButton = styled(Button)`
-  background-color: #025041;
-  `;
+  const [counterpartId, setId] = useState<string | undefined>(undefined);
 
+  // const [counterpartType, setType] = useState<CounterpartType | undefined>(
+  //   undefined
+  // );
+
+  const [counterpartType, setType] = useState<any | undefined>(
+    undefined
+  );
+
+  const closeModal = useCallback(() => {
+    counterpartId && setId(undefined);
+    counterpartType && setType(undefined);
+  }, [counterpartId, counterpartType]);
+  
   const monite = new MoniteApp({
     apiUrl: 'https://api.sandbox.monite.com/v1',  // Or 'https://api.monite.com/v1' to use Production
     entityId: '2973b4e2-4d26-4b63-b60e-39400a4f21ce',  // Entity whose data you want to access
@@ -28,10 +41,10 @@ const PAYABLE_ID = 'id';
     setSearchParams(searchParams);
   };
 
-  const closeModal = () => {
-    searchParams.delete(PAYABLE_ID);
-    setSearchParams(searchParams);
-  };
+  // const closeModal = () => {
+  //   searchParams.delete(PAYABLE_ID);
+  //   setSearchParams(searchParams);
+  // };
 
   monite.api.payable.getList()  // Returns Promise<Response>
     .then(res => {
@@ -42,7 +55,7 @@ const PAYABLE_ID = 'id';
       <PageHeader
         title="Counterparts"
         extra={
-          <Dropdown button={<CreateNewButton>Create New</CreateNewButton>}>
+          <Dropdown button={<Button color='#025041'>Create New</Button>}>
             <DropdownMenuItem
               // onClick={() => setType(CounterpartType.ORGANIZATION)} 
             >
@@ -57,7 +70,15 @@ const PAYABLE_ID = 'id';
         }
       />
       <CounterpartsTable onRowClick={onRowClick} />
-      {id && <CounterpartDetails id={id} onClose={closeModal} />}
+      {/* {id && <CounterpartDetails id={id} onClose={closeModal} />} */}
+      {(counterpartId || counterpartType) && (
+        <CounterpartDetails
+          id={counterpartId}
+          type={counterpartType}
+          onClose={closeModal}
+          onDelete={closeModal}
+        />
+      )}
     </>
   )
 }
