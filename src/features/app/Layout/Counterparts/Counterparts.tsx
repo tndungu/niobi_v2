@@ -5,6 +5,7 @@ import { useSearchParams } from 'react-router-dom';
 import PageHeader from '../PageHeader';
 import { Button, Dropdown, DropdownMenuItem } from '@team-monite/ui-kit-react';
 //import { CounterpartType } from '@team-monite/ui-widgets-react';
+import { CounterpartType } from '@team-monite/sdk-api';
 
 import styled from '@emotion/styled';
 
@@ -12,11 +13,7 @@ export const Counterparts = () => {
   
   const [counterpartId, setId] = useState<string | undefined>(undefined);
 
-  // const [counterpartType, setType] = useState<CounterpartType | undefined>(
-  //   undefined
-  // );
-
-  const [counterpartType, setType] = useState<any | undefined>(
+  const [counterpartType, setType] = useState<CounterpartType | undefined>(
     undefined
   );
 
@@ -57,12 +54,12 @@ const PAYABLE_ID = 'id';
         extra={
           <Dropdown button={<Button color='#025041'>Create New</Button>}>
             <DropdownMenuItem
-              // onClick={() => setType(CounterpartType.ORGANIZATION)} 
+               onClick={() => setType(CounterpartType.ORGANIZATION)} 
             >
               Organization
             </DropdownMenuItem>
             <DropdownMenuItem
-              // onClick={() => setType(CounterpartType.INDIVIDUAL)}
+               onClick={() => setType(CounterpartType.INDIVIDUAL)}
             >
               Individual
             </DropdownMenuItem>
